@@ -1,4 +1,5 @@
-load '.\data\res_test_data.mat'
+clear
+load '.\data\res_test_data_30.mat'
 
 res_test_map=mapminmax(res_test,0,1);
 
@@ -21,7 +22,8 @@ end
 
 sample_num = 25;
 person_num = 10;
-%计算inside_class与outside_class
+%得到相似度矩阵之后，然后把类内的相似度部分与类外的相似度部分分开
+%计算inside_class与outside_class 
 
 inside_class=[];
 for i=1:person_num
